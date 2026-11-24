@@ -1,0 +1,365 @@
+/* 不動産三資格 一問一答ドリル (tools.pug-o.jp) */
+:root {
+  --navy: #1f3a5f;
+  --navy-dark: #16293f;
+  --ink: #22282e;
+  --muted: #5a6570;
+  --line: #d9dee4;
+  --bg: #ffffff;
+  --bg-soft: #f4f6f8;
+  --accent: #1f3a5f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Yu Gothic Medium", "Yu Gothic", YuGothic,
+    "Noto Sans JP", "Meiryo", sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* ---------- header ---------- */
+.site-header {
+  border-bottom: 3px solid var(--navy);
+  background: #fff;
+}
+
+.header-inner {
+  max-width: 64em;
+  margin: 0 auto;
+  padding: 14px 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 28px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--navy);
+}
+
+.brand-logo {
+  width: 110px;
+  height: auto;
+  display: block;
+}
+
+.brand-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+.brand-text small {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+.site-nav {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+}
+
+.site-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: var(--navy);
+  border-bottom-color: var(--navy);
+}
+
+/* ---------- layout ---------- */
+.wrap {
+  max-width: 46em;
+  margin: 0 auto;
+  padding: 28px 20px 56px;
+}
+
+section {
+  margin-bottom: 44px;
+}
+
+h1 {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--navy-dark);
+  margin: 0 0 14px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--navy);
+  border-bottom: 2px solid var(--navy);
+  padding-bottom: 6px;
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-size: 1.08rem;
+  line-height: 1.6;
+  margin: 0 0 6px;
+  color: var(--navy-dark);
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+ul,
+ol {
+  margin: 0 0 14px;
+  padding-left: 1.4em;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: var(--navy);
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+/* ---------- hero / hub head ---------- */
+.hero {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 26px 24px 12px;
+}
+
+.hub-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.mascot-spot {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px dashed var(--line);
+  padding-top: 14px;
+  margin-top: 18px;
+}
+
+.mascot-spot img {
+  width: 110px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.mascot-spot p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ---------- exam cards ---------- */
+.exam-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 40em) {
+  .exam-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.exam-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--navy);
+  border-radius: 6px;
+  padding: 18px 18px 14px;
+  text-decoration: none;
+  color: var(--ink);
+  background: #fff;
+}
+
+.exam-card:hover,
+.exam-card:focus {
+  background: var(--bg-soft);
+}
+
+.exam-card h3 {
+  font-size: 1.15rem;
+}
+
+.exam-meta {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.exam-card p {
+  font-size: 0.94rem;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* ---------- steps ---------- */
+.steps li {
+  margin-bottom: 10px;
+}
+
+/* ---------- field list ---------- */
+.field-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.field-item {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: 4px;
+  padding: 14px 18px 6px;
+  background: #fff;
+}
+
+.field-item p {
+  font-size: 0.95rem;
+}
+
+/* ---------- operator ---------- */
+.operator-box {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.operator-box img {
+  width: 110px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 34em) {
+  .operator-box {
+    flex-direction: column;
+  }
+}
+
+/* ---------- misc ---------- */
+.policy-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.notfound {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.back-top {
+  display: inline-block;
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 26px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.back-top:hover,
+.back-top:focus {
+  background: var(--navy-dark);
+}
+
+/* AdSense slot placeholder (enabled after review approval) */
+.ad-slot {
+  display: none;
+}
+
+/* ---------- footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--bg-soft);
+}
+
+.footer-inner {
+  max-width: 64em;
+  margin: 0 auto;
+  padding: 22px 20px 28px;
+  text-align: center;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 8px;
+}
+
+.footer-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 34em) {
+  .brand-text {
+    font-size: 1.05rem;
+  }
+
+  .site-nav {
+    margin-left: 0;
+  }
+
+  h1 {
+    font-size: 1.45rem;
+  }
+}
