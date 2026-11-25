@@ -363,3 +363,16 @@ a {
     font-size: 1.45rem;
   }
 }
+
+/* 一問一答ドリル (2026-11-25) */
+.crumbs{font-size:.85rem;color:#5a6a7d;margin:18px 0 6px}
+.qa-list{margin:20px 0}
+.qa-item{border:1px solid #d8dee6;border-radius:10px;padding:16px 18px;margin:0 0 14px;background:#fff}
+.qa-q{margin:0 0 10px;font-weight:600;line-height:1.8}
+.qa-num{display:inline-block;background:#1f3a5f;color:#fff;font-size:.78rem;border-radius:6px;padding:1px 8px;margin-right:8px;vertical-align:2px}
+.qa-a summary{cursor:pointer;color:#1f3a5f;font-weight:600;border:1px solid #1f3a5f;border-radius:8px;display:inline-block;padding:4px 14px;font-size:.9rem}
+.qa-a[open ] summary{margin-bottom:10px}
+.qa-ans{border-top:1px dashed #c4cdd8;padding-top:10px;line-height:1.9}
+.set-list li{margin:8px 0}
+.set-nav{margin:26px 0;font-size:.95rem}
+.field-drill{margin-top:8px}
