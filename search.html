@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サイト内検索｜不動産三資格 一問一答ドリル</title>
+<meta name="description" content="不動産三資格 一問一答ドリルのサイト内検索。一問一答の問題文と、サイト内のページをキーワードで探せます。">
+<link rel="canonical" href="https://tools.pug-o.jp/search.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="不動産三資格 一問一答ドリル">
+<meta property="og:title" content="サイト内検索｜不動産三資格 一問一答ドリル">
+<meta property="og:description" content="不動産三資格 一問一答ドリルのサイト内検索。一問一答の問題文と、サイト内のページをキーワードで探せます。">
+<meta property="og:url" content="https://tools.pug-o.jp/search.html">
+<meta property="og:image" content="https://tools.pug-o.jp/images/icon-1024.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/images/favicon.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css">
+<style>
+.search-form { display: flex; gap: 8px; max-width: 640px; }
+.search-form input { flex: 1; min-width: 0; font-size: 1rem; padding: 12px 14px; border: 1px solid #c9ced6; border-radius: 10px; }
+.search-form button { padding: 12px 20px; border: 0; border-radius: 10px; background: #2e4a3a; color: #fff; font-size: 1rem; cursor: pointer; }
+.chips { margin: 14px 0 0; line-height: 2.2; }
+.chip { display: inline-block; margin: 0 6px 6px 0; padding: 2px 12px; border: 1px solid #c9ced6; border-radius: 999px; background: #fff; font-size: 0.9rem; cursor: pointer; }
+#status { margin: 18px 0 10px; color: #555; }
+.res-card { background: #fff; border: 1px solid #e2e5ea; border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+.res-card h2 { margin: 0 0 6px; font-size: 1.05rem; line-height: 1.6; }
+.res-card p { margin: 0; line-height: 1.8; color: #444; font-size: 0.95rem; }
+.res-meta { margin: 0 0 6px !important; }
+.res-kind { display: inline-block; background: #2e4a3a; color: #fff; font-size: 0.75rem; padding: 1px 9px; border-radius: 999px; }
+.res-card mark { background: #ffe98a; color: inherit; padding: 0 2px; border-radius: 3px; }
+.no-hit { line-height: 1.9; color: #444; }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-669BYPTSKL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-669BYPTSKL');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7738139416541721" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/images/logo.png" alt="メガネをかけたマスコット" width="110">
+      <span class="brand-text">不動産三資格 一問一答ドリル<small>tools.pug-o.jp</small></span>
+    </a>
+    <nav class="site-nav">
+      <a href="/">トップ</a>
+      <a href="/kantei/">不動産鑑定士</a>
+      <a href="/takken/">宅建</a>
+      <a href="/shokenka/">証券化マスター</a>
+      <a href="/about/">このサイトについて</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <p class="crumbs"><a href="/">トップ</a> ＞ サイト内検索</p>
+  <section class="hub-head">
+    <p class="hub-eyebrow">検索</p>
+    <h1>サイト内検索</h1>
+    <p class="lead">一問一答の問題文と、サイト内のページをキーワードで探せます。言葉をスペースで区切ると、全部を含むものだけが表示されます（AND検索）。問題が見つかったら、該当するセットのページへ進んでください。</p>
+  </section>
+  <div class="search-form">
+    <input id="q" type="search" placeholder="例：用途地域、開発許可、市街化調整区域" aria-label="検索キーワード" />
+    <button id="go" type="button">検索</button>
+  </div>
+  <p class="chips">よく探される言葉：
+    <button class="chip" type="button">用途地域</button>
+    <button class="chip" type="button">開発許可</button>
+    <button class="chip" type="button">市街化調整区域</button>
+    <button class="chip" type="button">地区計画</button>
+  </p>
+  <p id="status">検索データを読み込み中…</p>
+  <div id="results"></div>
+  <noscript><p class="no-hit">検索には JavaScript が必要です。お手数ですが、<a href="/takken/ichimon/toshi-keikaku.html">都市計画法 一問一答の一覧</a>から探してみてください。</p></noscript>
+  <div class="ad-slot" aria-hidden="true"></div>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <nav class="footer-nav">
+      <a href="/about/">このサイトについて</a>
+      <a href="/privacy/">プライバシーポリシー</a>
+      <a href="/contact/">お問い合わせ</a>
+    </nav>
+    <nav class="footer-nav">
+      姉妹サイト：<a href="https://pug-o.jp/">ぱぐのしっぽ（ぱぐお）</a>／<a href="https://baseball.pug-o.jp/">飼い主の野球コメントスタジアム</a>／<a href="https://invest.pug-o.jp/">投資のしっぽ</a>
+    </nav>
+    <p class="copyright">&copy; 2026 ぱぐお（ぱぐのしっぽ）</p>
+  </div>
+</footer>
+<script>
+
+(function () {
+  var input = document.getElementById('q');
+  var btn = document.getElementById('go');
+  var box = document.getElementById('results');
+  var status = document.getElementById('status');
+  var ITEMS = null;
+
+  function esc(s) {
+    return s.replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function norm(s) { return (s || '').toLowerCase(); }
+  function termsOf(q) {
+    return norm(q).split(/[\s\u3000]+/).filter(function (w) { return w.length > 0; });
+  }
+  function score(item, terms, phrase) {
+    var t = norm(item.t), d = norm(item.d), s = 0, i, w;
+    for (i = 0; i < terms.length; i++) {
+      w = terms[i];
+      if (t.indexOf(w) >= 0) { s += 10; }
+      else if (d.indexOf(w) >= 0) { s += 3; }
+      else { return -1; } // AND検索
+    }
+    if (terms.length > 1 && t.indexOf(phrase) >= 0) { s += 15; }
+    if (terms.length > 0 && t.indexOf(terms[0]) === 0) { s += 2; }
+    return s;
+  }
+  function snippet(item, terms) {
+    var text = item.s || item.d || '';
+    var lower = norm(text), pos = -1, i;
+    for (i = 0; i < terms.length; i++) {
+      var p = lower.indexOf(terms[i]);
+      if (p >= 0 && (pos < 0 || p < pos)) { pos = p; }
+    }
+    var start = pos > 30 ? pos - 30 : 0;
+    var out = (start > 0 ? '…' : '') + text.slice(start, start + 110) + (start + 110 < text.length ? '…' : '');
+    var e = esc(out);
+    var seen = {};
+    for (i = 0; i < terms.length; i++) {
+      var et = esc(terms[i]);
+      if (et && !seen[et]) { seen[et] = 1; e = e.split(et).join('<mark>' + et + '</mark>'); }
+    }
+    return e;
+  }
+  function render(list, terms) {
+    if (!list.length) {
+      box.innerHTML = '<p class="no-hit">見つかりませんでした。言葉を変えるか、短くして試してみてください。</p>';
+      status.textContent = '0件';
+      return;
+    }
+    status.textContent = list.length + '件見つかりました';
+    var h = '';
+    for (var i = 0; i < list.length; i++) {
+      var it = list[i];
+      h += '<article class="res-card"><p class="res-meta"><span class="res-kind">' + esc(it.k) + '</span></p>'
+        + '<h2><a href="' + esc(it.u) + '">' + esc(it.t) + '</a></h2>'
+        + '<p>' + snippet(it, terms) + '</p></article>';
+    }
+    box.innerHTML = h;
+  }
+  function run() {
+    var q = input.value.trim();
+    if (!ITEMS) { return; }
+    if (!q) {
+      box.innerHTML = '';
+      status.textContent = 'キーワードを入れると、問題文とページから探します。';
+      return;
+    }
+    var terms = termsOf(q);
+    var phrase = norm(q).replace(/[\s\u3000]+/g, ' ');
+    var hits = [];
+    for (var i = 0; i < ITEMS.length; i++) {
+      var s = score(ITEMS[i], terms, phrase);
+      if (s >= 0) { hits.push({ item: ITEMS[i], s: s, i: i }); }
+    }
+    hits.sort(function (a, b) { return b.s - a.s || a.i - b.i; });
+    render(hits.slice(0, 50).map(function (x) { return x.item; }), terms);
+  }
+  fetch('/search-index.json')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      ITEMS = data.items || [];
+      status.textContent = 'キーワードを入れると、問題文とページから探します。（全' + ITEMS.length + '件）';
+      var q = new URLSearchParams(location.search).get('q');
+      if (q) { input.value = q; run(); }
+    })
+    .catch(function () {
+      status.textContent = '検索データの読み込みに失敗しました。時間をおいて開き直してみてください。';
+    });
+  btn.addEventListener('click', run);
+  input.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); run(); } });
+  input.addEventListener('input', run);
+  var chips = document.querySelectorAll('.chip');
+  for (var i = 0; i < chips.length; i++) {
+    chips[i].addEventListener('click', function () { input.value = this.textContent; run(); input.focus(); });
+  }
+})();
+
+</script>
+</body>
+</html>
