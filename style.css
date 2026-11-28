@@ -1,4 +1,4 @@
-/* 不動産三資格 一問一答ドリル (tools.pug-o.jp) */
+/* ぱぐおとお勉強 (tools.pug-o.jp) */
 :root {
   --navy: #1f3a5f;
   --navy-dark: #16293f;
@@ -376,3 +376,39 @@ a {
 .set-list li{margin:8px 0}
 .set-nav{margin:26px 0;font-size:.95rem}
 .field-drill{margin-top:8px}
+
+/* ---------- 自己チェック（苦手管理） ---------- */
+.qa-check {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.qa-check .qc-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.qa-check button {
+  padding: 4px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 0.88rem;
+}
+.qa-check button.qc-ok.on {
+  background: #2e4a3a;
+  color: #fff;
+  border-color: #2e4a3a;
+}
+.qa-check button.qc-ng.on {
+  background: #b3543f;
+  color: #fff;
+  border-color: #b3543f;
+}
+#weak-status {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
